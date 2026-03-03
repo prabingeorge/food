@@ -5,21 +5,21 @@ import { Route, Routes } from 'react-router-dom'
 import Add from './pages/Add/Add';
 import List from './pages/List/List';
 import Order from './pages/Orders/Orders';
- import { ToastContainer } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 
 const App = () => {
-  const url = 'http://localhost:4000';
+  const url = 'https://food-6qql.onrender.com'; // 'http://localhost:4000';
   return (
     <div>
-      <ToastContainer/>
+      <ToastContainer />
       <Navbar />
       <hr />
       <div className="app-content">
         <Sidebar />
         <Routes>
-          <Route path="/add" element={<Add url={url}/>} />
-          <Route path="/list" element={<List url={url}/>} />
-          <Route path="/orders" element={<Order url={url}/>} />
+          <Route path="/add" element={<Add url={url} />} />
+          <Route path="/list" element={<List url={url} />} />
+          <Route path="/orders" element={<Order url={url} />} />
         </Routes>
       </div>
     </div>
