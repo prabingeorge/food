@@ -3,6 +3,7 @@ import "./Navbar.css";
 import { Link, useNavigate } from 'react-router-dom';
 import { StoreContext } from '../../context/StoreContext';
 import { FaMagnifyingGlass, FaBasketShopping, FaUserLarge, FaBagShopping, FaArrowRightLong } from "react-icons/fa6";
+import logoHeader from "../../assets/icons/logo-header.png";
 
 const Navbar = ({ setShowLogin }) => {
 
@@ -21,7 +22,7 @@ const Navbar = ({ setShowLogin }) => {
         <div className='navbar'>
             <Link to="/">
                 {/* <p>Amora</p> */}
-                <img src="../../../src/assets/icons/logo-header.png" alt='logo' className='logo' />
+                <img src={logoHeader} alt='logo' className='logo' />
             </Link>
             <ul className='navbar-menu'>
                 <Link to='/' onClick={() => setMenu("home")} className={menu === 'home' ? "active" : ""}>home</Link>
