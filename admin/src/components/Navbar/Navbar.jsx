@@ -5,7 +5,7 @@ import { FaUserLarge } from "react-icons/fa6";
 const Navbar = () => {
   return (
     <div className='navbar'>
-        <img className='logo' src="logo" alt="logo1" />
+        <img className='logo' src={`../../assets/icons/logo-header.png`} alt="logo" />
         <FaUserLarge />
         {/* <img className='profile' src="profile" alt="profile" /> */}
     </div>
