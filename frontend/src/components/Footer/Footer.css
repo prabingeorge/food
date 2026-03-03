@@ -30,6 +30,10 @@
     cursor: pointer;
 }
 
+.footer-content-left .company-logo {
+    width: 80px;
+}
+
 .footer-content-right h2, .footer-content-center h2 {
    color: #fff;
 }
