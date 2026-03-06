@@ -8,8 +8,8 @@ import Order from './pages/Orders/Orders';
 import { ToastContainer } from 'react-toastify';
 
 const App = () => {
-  // const url = 'http://localhost:4000';
-  const url = process.env.APP_URL;
+
+  const apiUrl = import.meta.env.VITE_API_URL;
   return (
     <div>
       <ToastContainer />
@@ -18,9 +18,9 @@ const App = () => {
       <div className="app-content">
         <Sidebar />
         <Routes>
-          <Route path="/add" element={<Add url={url} />} />
-          <Route path="/list" element={<List url={url} />} />
-          <Route path="/orders" element={<Order url={url} />} />
+          <Route path="/add" element={<Add url={apiUrl} />} />
+          <Route path="/list" element={<List url={apiUrl} />} />
+          <Route path="/orders" element={<Order url={apiUrl} />} />
         </Routes>
       </div>
     </div>
