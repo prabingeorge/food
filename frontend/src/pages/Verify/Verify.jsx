@@ -8,12 +8,12 @@ const Verify = () => {
     const [searchParams, setSearchParams] = useSearchParams();
     const success = searchParams.get("success");
     const orderId = searchParams.get("orderId");
-    const { url, token } = useContext(StoreContext);
+    const { appUrl, token } = useContext(StoreContext);
     const navigate = useNavigate();
 
     useEffect(() => {
         const verifyPayment = async () => {
-            const response = await axios.post(url + "/api/order/verify", { success, orderId },{ headers: { token } });
+            const response = await axios.post(appUrl + "/api/order/verify", { success, orderId },{ headers: { token } });
             if (response?.data?.success) {
                 navigate("/myorders");
             } else {

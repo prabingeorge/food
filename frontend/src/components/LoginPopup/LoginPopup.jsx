@@ -5,7 +5,7 @@ import axios from 'axios';
 
 const LoginPopup = ({setShowLogin}) => {
 
-    const {url, setToken} = useContext(StoreContext);
+    const {appUrl, setToken} = useContext(StoreContext);
 
     const [currState, setCurrState] = useState("Login");
     const [data, setData] = useState({
@@ -22,7 +22,7 @@ const LoginPopup = ({setShowLogin}) => {
 
     const onLogin = async(event)=> {
         event.preventDefault();
-        let newUrl = url;
+        let newUrl = appUrl;
         if (currState === 'Login') {
             newUrl += "/api/user/login";
         } else {

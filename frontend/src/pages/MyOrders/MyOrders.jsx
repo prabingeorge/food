@@ -6,17 +6,17 @@ import { FaCartShopping } from "react-icons/fa6";
 
 const MyOrders = () => {
 
-    const { url, token } = useContext(StoreContext);
+    const { appUrl, token } = useContext(StoreContext);
     const [data, setData] = useState([]);
 
     const fetchOrders1 = async () => {
-        const response = await axios.post(url + "/api/order/userorders", {}, { headers: { token } });
+        const response = await axios.post(appUrl + "/api/order/userorders", {}, { headers: { token } });
         setData(response?.data.data);
     }
 
     useEffect(() => {
         const fetchOrders = async () => {
-            const response = await axios.post(url + "/api/order/userorders", {}, { headers: { token } });
+            const response = await axios.post(appUrl + "/api/order/userorders", {}, { headers: { token } });
             setData(response?.data.data);
         }
         if (token) {
