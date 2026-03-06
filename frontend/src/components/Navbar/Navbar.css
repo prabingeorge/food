@@ -30,6 +30,7 @@
     border-radius: 50px;
     cursor: pointer;
     transition: 0.3s;
+    margin-top: 0px;
 }
 .navbar button:hover {
     background: #fff4f2;

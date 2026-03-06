@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react';
 import './LoginPopup.css';
 import { StoreContext } from '../../context/StoreContext';
 import axios from 'axios';
+import crossIcon from "../../assets/icons/cross-icon.jpg";
 
 const LoginPopup = ({setShowLogin}) => {
 
@@ -43,7 +44,7 @@ const LoginPopup = ({setShowLogin}) => {
         <form onSubmit={onLogin} className="login-popup-container">
             <div className="login-popup-title">
                 <h2>{currState}</h2>
-                <img onClick={()=>setShowLogin(false)} src="" alt="crossicon" />
+                <img onClick={()=>setShowLogin(false)} src={crossIcon} alt="crossicon" />
             </div>
             <div className="login-popup-inputs">
                 {currState === 'Login'?<></>:<input name="name" onChange={onChangeHandler} value={data?.name} type="text" placeholder='Your name' required />}
