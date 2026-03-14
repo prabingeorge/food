@@ -11,10 +11,15 @@
     width: 100%;
     border-radius: 15px 15px 0px 0px;
     height: 200px;
+    object-fit: cover;
+    object-position: center;
 }
 
 .food-item-info {
     padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .food-item-name-rating {

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Navbar from './components/Navbar/Navbar';
+import CartNotification from './components/CartNotification/CartNotification';
 import { Route, Routes } from 'react-router-dom';
 import Home from './pages/Home/Home';
 import Cart from './pages/Cart/Cart';
@@ -27,6 +28,7 @@ const App = () => {
         </Routes>
       </div>
       <Footer />
+      <CartNotification />
     </>
   )
 }
